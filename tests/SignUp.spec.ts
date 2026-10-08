@@ -23,6 +23,13 @@ await signUpPage.fillAccountInfo(
     await signUpPage.verifyAccountCreation()
 })
 
-
+test('Sign Up with existing email', async ({page}) => {
+const homePage=new HomePage(page);
+const signUpPage=new SignUpPage(page);
+await homePage.goTo()
+await homePage.clickOnSignUpLoginButton()
+await signUpPage.signUp('ahf12','ahf12@example.com')
+await signUpPage.verifySingUpErrorMessage()
+})
 
 })
