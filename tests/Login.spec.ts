@@ -3,7 +3,7 @@ import{HomePage}from'../pages/HomePage';
 import{LoginPage}from'../pages/LoginPage';
 
 test.describe('Login Test',()=>{
-test('Login with valid credentials',async({page})=>{
+test('Login with valid credentials and logout',async({page})=>{
 const homePage=new HomePage(page);
 const loginPage=new LoginPage(page);
 await homePage.goTo()
